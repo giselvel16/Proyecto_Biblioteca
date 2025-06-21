@@ -7,6 +7,10 @@ public class Libro implements Comparable<Libro> {
     private double precio;
     private boolean disponible; // true/false
 
+    public Libro(int codigo){
+        this.codigo = codigo;
+    }
+    
     public Libro(int codigo, String titulo, String autor, double precio, boolean disponible) {
         this.codigo = codigo;
         this.titulo = titulo;
@@ -14,7 +18,7 @@ public class Libro implements Comparable<Libro> {
         this.precio = precio;
         this.disponible = disponible;
     }
-
+    
     public int getCodigo() {
         return codigo;
     }
@@ -54,8 +58,6 @@ public class Libro implements Comparable<Libro> {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
-
-    
     
     @Override
     public int compareTo(Libro otro) {
